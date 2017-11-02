@@ -1,0 +1,7 @@
+1) hello is not defined error
+2) logs 'magnet'
+3) logs 'super cool'
+4) logs 'chicken', logs 'half-chicken'
+5) mean is not defined error
+6) genre is not defined, rock, r&b, disco
+7) san jose, seatle, burbank, san jose

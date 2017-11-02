@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript math</title>
+    <script type="text/javascript">
+    // Math 1
+        function zero_negativity(arr){
+            let noNegs = true;
+            for (idx in arr){
+                if (arr[idx] < 0){
+                    noNegs = false;
+                }
+            }
+            return noNegs;
+        }
+
+    // Math2
+        function is_even(num){
+            if (num % 2 == 0){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+    // Math3
+        function how_many_even(arr){
+            let evenCount = 0;
+            for (idx in arr){
+                if (arr[idx] % 2 == 0){
+                    evenCount ++;
+                }
+            }
+            return evenCount;
+        }
+
+    // Math4
+        function create_dummy_array(n){
+            let randArr = []
+            for (let i = 0; i < n; i++){
+                randArr.push(Math.floor(Math.random()*10));
+            }
+            return randArr;
+        }
+
+    // Math5
+        function random_choice(arr){
+            let rand = Math.floor(Math.random()*arr.length)
+            console.log(rand)
+            return arr[rand]
+        }
+
+        console.log(zero_negativity([1,2,3,4,5,-1,-2]))
+
+        console.log(is_even(33))
+        console.log(is_even(-82))
+
+        console.log(how_many_even([1,2,3,4,5,-1,-2]))
+
+        console.log(create_dummy_array(8))
+
+
+        console.log(random_choice([1,2,3,4,5,-1,-2]))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id='wrapper'>
+        <form action="/process" method="POST">
+            <fieldset>
+                <label for="name">Your Name:</label>
+                <input type="text" name="name" id="name">
+            </fieldset>
+
+            <fieldset >
+                <label for="location">Dojo Location:</label>
+                <select type="text" name="location" id="location">
+                    <option value="Silicon Valley">Silicon Valley</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Washington D.C.">Washington D.C.</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Tulsa">Tulsa</option>
+                </select>
+            </fieldset>
+
+            <fieldset >
+                <label for="fav_language">Favorite Language</label>
+                <select type="text" name="fav_language" id="fav_language">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                    <option value="C#">C#</option>
+                    <option value="C++">C++</option>
+                    <option value="Objective C">Objective C</option>
+                    <option value="Scala">Scala</option>
+                    <option value="Swift">Swift</option>
+                </select>
+            </fieldset>
+
+            <fieldset >
+                <label for="comment">Comment:</label>
+                <textarea name="comment" id="comment" cols="60" rows="10"></textarea>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

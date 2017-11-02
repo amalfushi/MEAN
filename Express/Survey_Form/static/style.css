@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* outline: 1px dotted darkred; */
+}
+#wrapper, form{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+}
+fieldset{
+    border: none;
+    /* display: inline-flex; */
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
+label{
+    display: inline-block;
+}
+button{
+    width: 200px;
+}
+.results{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+}
+p{
+    display: inline-block;
+}

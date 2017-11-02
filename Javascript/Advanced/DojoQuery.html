@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DojoQuery</title>
+
+    <script type="text/javascript">
+        function $Dojo(buttonID){
+            this.button = document.getElementById(buttonID);
+            this.click = function (callback){
+                this.button.addEventListener("click", callback);
+            };
+
+            this.hover = function(inCallback, outCallback){
+                this.button.addEventListener("mouseover", inCallback);
+                this.button.addEventListener("mouseout", outCallback);
+            };
+
+            return this;
+        };
+    </script>
+
+</head>
+<body>
+    <p>Open console to see:</p>
+    <button id="button">$DojoQuery</button>
+    <p>in action</p>
+    
+    <script type="text/javascript">
+        $Dojo('button').click(function(){console.log("The button's been clicked")})
+        $Dojo('button').hover(function(){console.log("The button's been hovered on")},
+            function(){console.log("The button's no longer hovered on")})
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id='wrapper'>
+        <div id='main'>
+            <h3>Submitted Information</h3>
+            <div class='results'>
+                <h4>Name:</h4>
+                <p><%= name %></p>
+            </div>
+            <div class='results'>
+                <h4>Location:</h4>
+                <p><%= location %></p>
+            </div>
+            <div class='results'>
+                <h4>Language:</h4>
+                <p><%= language %></p>
+            </div>
+            <div class='results'>
+                <h4>Comment:</h4>
+                <p><%= comment %></p>
+            </div>
+        </div>
+        <a href="/"><button>Go Back</button></a>
+    </div>
+</body>
+</html>

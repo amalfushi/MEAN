@@ -1,0 +1,6 @@
+week 1
+	monday: Javascript -- JS Hoisting
+	tuesday: OOP -- Deck of Cards
+	wednesday: Callbacks -- Fib+Nacci
+	thursday: Node + Express -- Survey Form
+	friday: MongoDB -- Message Board

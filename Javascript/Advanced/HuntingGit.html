@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="title"></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <button id="getName">Get Yo Name!</button>
+    <h1 id="name"></h1>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            let button = document.getElementById("getName")
+            button.addEventListener("click", getName);
+
+            function getName() {
+                $.get("https://api.github.com/users/amalfushi", displayName);
+            }
+
+            function displayName(data){
+                console.log(data);
+                if(data.login){
+                    $('body').append("<h1>"+data.login+"</h1>")
+                }
+            }
+        });
+    </script>
+</body>
+</html>
