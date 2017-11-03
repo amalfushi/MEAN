@@ -1,0 +1,41 @@
+1. create database
+    use my_first_db
+2. create students collection
+    db.createCollection("students")
+3-4. create 5 students with name, home state, lucky number, birthday(object)
+    db.students.insert({name:"Dustin", home_state:"WA", lucky_number:42, birthday:{month:6, day:13, year:1988}})
+5. get all students
+    db.students.find({}).pretty()
+6. get all students from WA or CA...
+    db.students.find({$or:[{home_state:"WA"}, {home_state:"CA"}]}).pretty()
+7. get all students whose lucky number is ...
+    greater than 3
+        db.students.find({lucky_number:{$gt:3}}).pretty()
+    less than or equal to 10
+        db.students.find({lucky_number:{$lte:10}}).pretty()
+    less than or equal to between 1 and 9(inclusive)
+        db.students.find({$and:[{lucky_number:{$lte:9}}, {lucky_number:{$gte:3}}]}).pretty()
+8. in one operation, add field to each student collection called interests(array). should contain 'coding,' 'brunch', 'mongodb'
+    db.students.update({}, {$set: {interests:["coding", "brunch", "MongoDB"]}}, {multi:true})
+9. add some unique interests
+    db.students.update({name:"Dustin Schroeder"}, {$set:{interests:["board games"]}})
+10. add taxes to someone's interests
+    db.students.update({name:"Sherlock"}, {$set:{interests:["taxes"]}})    
+11. remove taxes that you just added
+    db.students.update({name:"Sherlock"}, {$pull:{interests:"taxes"}})
+12. remove all students from WA or CA 
+    db.students.remove({$or:[{home_state:"WA"}, {home_state:"CA"}]})
+13. remove a student by name
+    db.students.remove({name:"Sustin Dchroeder"})
+14. remove a student whose lucky number is greater than 5(JUST ONE)
+    db.students.remove({lucky_number:{$gt:5}}, {justOne:true})
+15. add a field to each student collection called 'number_of_belts' and set to 0
+    db.students.update({}, {$set:{number_of_belts:0}}, {multi:true})
+16. increment this field by 1 for all students in WA
+    db.students.update({home_state:"WA"}, {$inc:{number_of_belts:1}}, {multi:true})
+17. rename the 'number_of_belts' field to 'belts_earned'
+    db.students.update({}, {$rename:{number_of_belts:belts_earned}}, {multie:true})
+18. remove lucky_number field from everyone
+    db.students.update({}, {$unset:{lucky_number:""}}, {multi:true})
+19. add 'updated_on' field and set the value as current database
+    db.students.update({},{$currentDate:{updated_on:true}},{multi:true})
