@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QuotingDojo</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Welcome to QuotingDojo</h1>
+        <form action="/quotes" method="post">
+            <label for="name">Your name: </label>
+            <input type="text" name="name" id="name">
+
+            <label for="quote">Your quote:</label>
+            <textarea name="quote" id="quote" cols="40" rows="15"></textarea>
+
+            <button type="submit">Add my quote!</button>
+        </form>
+        <a href="/quotes"><button>Skip to quotes!</button></a>
+    </div>
+</body>
+</html>
