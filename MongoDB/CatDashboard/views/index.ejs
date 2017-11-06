@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CATS!</title>
+</head>
+<body>
+    <h1>CATS!</h1>
+    <a href="/cats/new"><button>Create Cat</button></a>
+    <% if (cats.length == 0 ) { %>
+        <h3>There are currently no cats!</h3>
+    <% } else {%>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Color</th>
+                <th>Breed</th>
+                <th>Actions</th>
+            </thead>
+            <% for(const cat of cats) { %>
+                <tr>
+                    <td><%= cat.name %></td>
+                    <td><%= cat.age %></td>
+                    <td><%= cat.color %></td>
+                    <td><%= cat.breed %></td>
+                    <td><a href="/cats/<%= cat.id %>">View</a></td>
+                </tr>
+            <% } %>
+        </table>
+    <% } %>
+</body>
+</html>
