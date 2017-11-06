@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dojo Message Board</title>
+</head>
+<body>
+    <h1>The Dojo Message Board</h1>
+    <form action="/messages/new" method="POST">
+        <fieldset>
+            <legend>New Message</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+
+            <label for="message">Message:</label>
+            <textarea name="text" id="text" cols="50" rows="10"></textarea>
+
+            <button type="submit">Post Message</button>
+        </fieldset>
+    </form>
+    <% if (messages.length != 0) { %>
+        <% for (const message of messages) { %>
+            <fieldset class="post">
+                <legend>Name: <%= message.name %></legend>
+                <div class="message">
+                    <h2>Message: </h2>
+                    <p><%= message.text %></p>
+                </div>
+                <% for (const comment of message._comments) { %>
+                    <div class="comment">
+                        <p>Name: <%= comment.name %></p>
+                        <p>Comment: <%= comment.text %></p>
+                    </div>
+                <% } %>
+                <form action="messages/<%= message._id %>/newComment" method="POST">
+                    <legend>New Message</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name">
+        
+                    <label for="message">Message:</label>
+                    <textarea name="text" id="text" cols="50" rows="10"></textarea>
+        
+                    <button type="submit">Post Comment</button>
+                </form>
+            </fieldset>
+        <% } %>
+    <% } else { %>
+        <h3>There are currently no messages :(</h3>
+    <% } %>
+</body>
+</html>
