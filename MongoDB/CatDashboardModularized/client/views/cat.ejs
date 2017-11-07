@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= cat.name %></title>
+</head>
+<body>
+    <h1><%= cat.name %></h1>
+    <h2>Age: <%= cat.age %></h2>
+    <h2>Color: <%= cat.color %></h2>
+    <h2>Breed: <%= cat.breed %></h2>
+
+    <a href="/"><button>Go Back</button></a>
+    <a href="/cats/<%= cat._id %>/edit"><button>Edit</button></a>
+    <a href="/cats/<%= cat._id %>/delete"><button>Delete</button></a>
+</body>
+</html>

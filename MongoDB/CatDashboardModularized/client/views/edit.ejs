@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Cat</title>
+</head>
+<body>
+    <form action="/cats/<%= cat._id %>/edit" method="post">
+        <h1>New Cat</h1>
+        <input type="text" name="name" id="name" value="<%= cat.name %>"><br>
+        <input type="number" name="age" id="age" value="<%= cat.age %>" min="0" max="50"><br>
+        <input type="text" name="color" id="color" value="<%= cat.color %>"><br>
+        <input type="text" name="breed" id="breed" value="<%= cat.breed %>"><br>
+        <button type="submit">Edit Cat!</button>
+    </form>
+    <a href="/cats/<%= cat._id %>"><button>Go Back</button></a>
+    <a href="/"><button>Go home</button></a>
+</body>
+</html>
