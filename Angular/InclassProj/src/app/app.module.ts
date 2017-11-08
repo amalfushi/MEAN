@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { RayComponent } from './ray/ray.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RayComponent
   ],
   imports: [
     BrowserModule
