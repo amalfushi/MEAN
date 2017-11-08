@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RayComponent } from './ray.component';
+import { BarcodeGeneratorComponent } from './barcode-generator.component';
 
-describe('RayComponent', () => {
-  let component: RayComponent;
-  let fixture: ComponentFixture<RayComponent>;
+describe('BarcodeGeneratorComponent', () => {
+  let component: BarcodeGeneratorComponent;
+  let fixture: ComponentFixture<BarcodeGeneratorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RayComponent ]
+      declarations: [ BarcodeGeneratorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RayComponent);
+    fixture = TestBed.createComponent(BarcodeGeneratorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

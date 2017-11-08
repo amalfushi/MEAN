@@ -1,0 +1,11 @@
+.block{
+    width:80px;
+    height:80px;
+    /* outline:5px thin black; */
+    display:inline-block;
+    /* margin:0px; */
+}
+.barcode{
+    display:inline-flex;
+    flex-direction: row;
+}

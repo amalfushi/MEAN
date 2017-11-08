@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('inclass-proj App', () => {
+describe('retro-barcode App', () => {
   let page: AppPage;
 
   beforeEach(() => {

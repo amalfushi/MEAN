@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { RayComponent } from './ray/ray.component';
+import { BarcodeGeneratorComponent } from './barcode-generator/barcode-generator.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RayComponent
+    BarcodeGeneratorComponent
   ],
   imports: [
     BrowserModule
