@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    text-align: center;
+    background-color: rgb(161, 202, 241)
+}

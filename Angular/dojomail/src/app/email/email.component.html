@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <th>Email</th>
+    <th>Importance</th>
+    <th>Subject</th>
+    <th>Content</th>
+  </thead>
+  <tr *ngFor="let email of emails" [ngClass]="{'evens' : $index%2==0, 'odds' : !($index%2==0)}">
+    <td>{{email.address | lowercase }}</td>
+    <td *ngIf='email.importance'>High</td>
+    <td *ngIf='!email.importance'>Low</td>
+    <td>{{email.subject}}</td>
+    <td>{{email.content}}</td>
+  </tr>
+</table>
+

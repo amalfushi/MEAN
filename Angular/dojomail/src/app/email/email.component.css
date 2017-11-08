@@ -1,0 +1,10 @@
+th{
+    font-size: 20px;
+    text-align: left;
+    border-bottom: solid 1px black;
+}
+
+table{
+    margin: auto 0px;
+    border-spacing: 30px 5px;
+}
