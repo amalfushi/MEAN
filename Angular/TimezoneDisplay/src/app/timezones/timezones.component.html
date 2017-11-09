@@ -1,0 +1,8 @@
+<h1>US Time Zone Display</h1>
+
+<h2> {{ time }} </h2>
+<button (click)='adjustTime(0)' [ngClass]="{'clicked': lastClicked==0}">PST</button>
+<button (click)='adjustTime(1)' [ngClass]="{'clicked': lastClicked==1}">MST</button>
+<button (click)='adjustTime(2)' [ngClass]="{'clicked': lastClicked==2}">CST</button>
+<button (click)='adjustTime(3)' [ngClass]="{'clicked': lastClicked==3}">EST</button>
+<button (click)='resetTime()'>Clear</button>
