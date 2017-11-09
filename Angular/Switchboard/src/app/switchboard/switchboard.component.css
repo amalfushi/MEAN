@@ -1,0 +1,27 @@
+#switchboard{
+    display: flex;
+    justify-content: space-around;
+}
+.switch_container{
+    width: 80px;
+    height:80px;
+    background-color: rgb(100,100,100);
+    display: inline-block;
+    padding: 10px;
+}
+button{
+    height: 100%;
+    width: 100%;
+}
+.on, .off{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+}
+.on{
+    background-color: rgb(80, 148, 80);
+}
+.off{
+    background-color: rgb(150, 47, 47);
+}

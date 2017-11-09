@@ -1,0 +1,6 @@
+<div id="switchboard">
+    <div *ngFor='let switch of switches; let idx = index' class="switch_container">
+        <button class="switch on" *ngIf='switch.state' (click)='flip(idx)'>ON</button>
+        <button class="switch off" *ngIf='!switch.state' (click)='flip(idx)'>OFF</button>
+    </div>
+</div>
