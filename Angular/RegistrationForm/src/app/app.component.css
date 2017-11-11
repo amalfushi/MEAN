@@ -1,0 +1,11 @@
+.pretty{
+    width: 70%;
+    background-color: lightgrey;
+    padding: 15px;
+    margin: 20px auto;
+    border: 5px solid rgb(56, 56, 56);
+    border-radius: 15px;
+}
+h1{
+    display: inline-block;
+}

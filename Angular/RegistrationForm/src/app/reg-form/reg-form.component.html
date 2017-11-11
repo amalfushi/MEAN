@@ -1,0 +1,94 @@
+<h2>Account Information</h2>
+<form (submit)='onSubmit()'>
+  <div id="form_container">
+    <div id="left">
+      <p>First Name: 
+        <input 
+          type="text" 
+          name="first_name" 
+          id="first_name" 
+          required 
+          minlength="2" 
+          maxlength="24" 
+          [(ngModel)]="user.first_name" 
+          #first_name="ngModel"
+        />
+      </p>
+
+      <p>Last Name: 
+          <input 
+            type="text" 
+            name="last_name" 
+            id="last_name" 
+            required 
+            minlength="2" 
+            maxlength="24" 
+            [(ngModel)]="user.last_name" 
+            #last_name="ngModel"
+          />
+      </p>
+
+      <p>Email: <input type="text" name="email" id="email"></p>
+
+      <p>Password: 
+          <input 
+            type="text" 
+            name="password" 
+            id="password" 
+            required 
+            minlength="8" 
+            maxlength="24" 
+            pattern="^([a-zA-Z0-9@*#]{8,24})$"
+            [(ngModel)]="user.password" 
+            #password="ngModel"
+          />
+      </p>
+
+      <p>Confirm Password: 
+          <input 
+            type="text" 
+            name="c_password" 
+            id="c_password" 
+            required 
+            minlength="8" 
+            maxlength="24" 
+            [(ngModel)]="user.c_password" 
+            #c_password="ngModel"
+          />
+      </p>
+
+      <p>Street Address: <input type="text" name="street" id="street"></p>
+      <p>Unit/Apt #: <input type="text" name="apt" id="apt"></p>
+      <p>City: <input type="text" name="city" id="city"></p>
+      <p>State: <input type="text" name="state" id="state"></p>
+      <p>I'm Feeling lucky: 
+      <input type="radio" name="lucky" value="yes"> Yes
+      <input type="radio" name="lucky" value="no"> No</p>
+    </div>
+
+    <div id="right">
+      <p *ngIf='first_name.errors'> First Name is required.</p>
+      <br *ngIf='!first_name.errors'>
+
+      <p *ngIf='last_name.errors'>Last Name is required.</p>
+      <br *ngIf='!last_name.errors'>
+
+      <p>Email must be valid.</p>
+
+      <p *ngIf='password.errors'>Password must be at least 8 characters long.</p>
+      <br *ngIf='!password.errors'>
+
+      <p *ngIf='user.c_password != user.password && user.c_password'>Confirm Password must match Password.</p>
+      <br *ngIf="!user.c_password && !user.password">
+      <br *ngIf="!user.c_password == user.password">
+      
+      <p>Address is required.</p>
+      <br>
+      <p>City is required.</p>
+      <p>State is required.</p>
+      <p>Choosing how you feel is required.</p>
+    </div>
+
+  </div>
+  <button type="submit">Register</button>
+</form>
