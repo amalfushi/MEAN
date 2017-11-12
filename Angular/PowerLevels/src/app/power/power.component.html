@@ -1,0 +1,14 @@
+
+  <fieldset>
+    <legend>PowerComponent</legend>
+
+    <h1>Initial Power Level</h1>
+    <input type="number" max="100" min="1" [(ngModel)]="level">
+
+    <app-human [level]="level">Loading...</app-human>
+    <app-saiyan [level]="level">Loading...</app-saiyan>
+    <app-super-saiyan [level]="level">Loading...</app-super-saiyan>
+    <app-super-saiyan-2 [level]="level">Loading...</app-super-saiyan-2>
+    <app-super-saiyan-3 [level]="level">Loading...</app-super-saiyan-3>
+    <app-super-saiyan-4 [level]="level">Loading...</app-super-saiyan-4>
+  </fieldset>
