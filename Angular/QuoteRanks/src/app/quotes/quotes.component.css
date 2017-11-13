@@ -1,0 +1,13 @@
+form{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+#errors{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    color: darkred;
+    font-weight: bold;
+}

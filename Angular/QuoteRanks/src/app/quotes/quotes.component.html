@@ -1,0 +1,41 @@
+<form>
+  <div>
+    <h1>Add a Quote</h1>
+    <textarea 
+      name="quote_text" 
+      id="quote_text" 
+      cols="70" 
+      rows="7" 
+      required 
+      ng-trim="true"
+      minlength="4"
+      [(ngModel)]="quote.quote_text"
+      #quote_text="ngModel">
+    </textarea>
+
+    <p>Author: 
+      <input 
+        type="text" 
+        name="author" 
+        id="author" 
+        required
+        ng-trim="true"
+        minlength="1"
+        pattern="(^[a-zA-Z\- ]+$)"
+        [(ngModel)]="quote.author"
+        #author="ngModel">
+    </p>
+    <button (click)='addQuote()'>Add Quote</button>
+  </div>
+  <div id="errors">
+    <p class="error" *ngIf='quote_text.errors'>Quote is Required and must be more than 4 characters long</p>
+    <p class="error" *ngIf='author.errors'>Author is Required and must be more than 1 character long</p>
+  </div>  
+</form>
+
+<app-quote-list 
+  [quotes]="quotes" 
+  (upvote)="upVote($event)" 
+  (downvote)="downVote($event)"
+  (delete)="deleteQuote($event)"
+>Loading...</app-quote-list>

@@ -1,0 +1,38 @@
+.quote_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 2px solid rgb(85,85,85);
+    padding: 10px;
+}
+.left{
+    width:70%;
+    margin-right: 40px;
+}
+.right{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button_box{
+    margin-left:10px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.button_box button{
+    margin: 5px 0px;
+}
+
+.upVote{
+    background-color: rgb(150, 196, 150);
+}
+
+.downVote{
+    background-color: rgb(196, 150, 150);
+}
+
+.delete{
+    background-color: rgb(153, 153, 153);
+}
