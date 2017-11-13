@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+#wrapper{
+    border: 5px solid black;
+    border-radius: 15px;
+    margin: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

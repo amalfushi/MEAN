@@ -1,0 +1,27 @@
+<div id="wrapper">
+  <form (submit)="getUser(gUser)">
+    <h1>Github Score</h1>
+    <p>GitHub Username: 
+      <input 
+        type="text" 
+        name="username" 
+        id="username" 
+        required
+        [(ngModel)] = "gUser"
+        #form = "ngModel">
+    </p>
+    <button [disabled]="!form.valid" (click)="getUser()">Calculate my Github Score</button>
+  </form>
+
+  <div id="userScore">
+    <h1 *ngIf="userExists == false">User does not exist, pick a different GitHub username</h1>
+    <h1 *ngIf="score && userExists == true">Your Score: {{ score }}</h1>
+    <h2 class="darkRed" *ngIf="score > 0 && score <= 19 && userExists == true">Needs Work!</h2>
+    <h2 class="darkOrange" *ngIf="score >= 20 && score <= 49 && userExists == true">A Decent Start!</h2>
+    <h2 *ngIf="score >= 50 && score <= 99 && userExists == true">Doing Good!</h2>
+    <h2 class="darkGreen" *ngIf="score >= 100 && score <= 199 && userExists == true">Great Job!</h2>
+    <h2 class="darkBlue" *ngIf="score >= 200 && userExists == true">GitHub Elite!</h2>
+  </div>
+</div>
+<!-- {{ userExists }}
+{{ user | json}} -->
