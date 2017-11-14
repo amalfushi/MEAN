@@ -1,0 +1,6 @@
+<div id="note_list">
+  <div *ngFor="let note of notes" class="note_box">
+    <p class="note">"{{note.text}}"</p>
+    <p class="note">--{{ note.createdAt | date }}</p>
+  </div>
+</div>

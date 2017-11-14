@@ -1,0 +1,20 @@
+<div id="new_note">
+  <form (submit)='onSubmit()'>
+
+    <label for="note">Note:</label>
+    <textarea 
+      name="text" 
+      id="text" 
+      cols="70" 
+      rows="1" 
+      required 
+      minlength="3" 
+      ng-trim="true" 
+      [(ngModel)]="note.text" 
+      #text="ngModel">
+    </textarea>
+
+    <button type="submit" [disabled]="!text.valid">Add Note</button>
+  </form>
+  <p *ngIf="!text.valid && text.dirty" class="errors">Notes must be at least three characters</p>
+</div>

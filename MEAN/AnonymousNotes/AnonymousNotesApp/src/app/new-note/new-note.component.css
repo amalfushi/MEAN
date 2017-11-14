@@ -1,0 +1,11 @@
+#new_note{
+    margin-bottom:20px;
+}
+label, textarea, button{
+    vertical-align: top;
+}
+.errors{
+    font-weight: bold;
+    height: 20px;
+    color: darkred;
+}
