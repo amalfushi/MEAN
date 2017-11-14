@@ -1,0 +1,8 @@
+<h1>Seattle, WA</h1>
+<p *ngIf="humidity">Humidity: {{ humidity }} %</p>
+<p *ngIf="temp">Temperature(average): {{ temp }}° F</p>
+<p *ngIf="max">Temperature(High): {{ max }}° F</p>
+<p *ngIf="min">Temperature(Low): {{ min }}° F</p>
+<p *ngIf="status">Status: {{ status }}</p>
+
+<img src="./../../../assets/seattle.jpg" alt="Seattle" srcset="" *ngIf="status">
