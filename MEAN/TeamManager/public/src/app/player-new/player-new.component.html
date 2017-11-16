@@ -1,0 +1,34 @@
+<h1>Add Player</h1>
+<form (submit)="addPlayer()" #formData="ngForm">
+  <label>Player Name</label>
+  <input type="text" name="name" required minlength="2" ng-trim [(ngModel)]="newPlayer.name">
+  
+  <label>Preferred Position</label>
+  <input type="text" name="position" minlength="2" [(ngModel)]="newPlayer.position">
+
+  <div class="GameSelects">
+    <label>Game 1</label>
+    <select name="Game 1" [(ngModel)]="newPlayer.status.game1">
+      <option value="Playing">Playing</option>
+      <option value="Not Playing">Not Playing</option>
+      <option value="Undecided">Undecided</option>
+    </select>
+
+    <label>Game 2</label>
+    <select name="Game 2" [(ngModel)]="newPlayer.status.game2">
+      <option value="Playing">Playing</option>
+      <option value="Not Playing">Not Playing</option>
+      <option value="Undecided">Undecided</option>
+    </select>
+
+    <label>Game 3</label>
+    <select name="Game 3" [(ngModel)]="newPlayer.status.game3">
+      <option value="Playing">Playing</option>
+      <option value="Not Playing">Not Playing</option>
+      <option value="Undecided">Undecided</option>
+    </select>
+  </div>
+
+  <input type="submit" value="Add" [disabled]="!formData.valid">
+</form>
+{{newPlayer|json}}

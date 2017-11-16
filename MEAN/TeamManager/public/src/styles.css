@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: darkslategray;
+}
+#wrapper{
+    width: 900px;
+    background-color: white;
+    border: thick solid rgb(134, 134, 132);
+    border-radius: 15px;
+    margin: 10px auto;
+    padding: 20px;
+}
+.subWrapper{
+    padding:20px;
+    border: thin solid rgb(134, 134, 132)
+}
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+li{
+    display: inline-block;
+    font-size: 30px;
+}

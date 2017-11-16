@@ -1,0 +1,7 @@
+<form #formData="ngForm" (submit)="createProduct()">
+  <input type="text" name="title" placeholder="Title" required [(ngModel)]="newProduct.title">
+  <input type="number" name="price" placeholder = "Price" required [(ngModel)]="newProduct.price">
+  <input type="text" name="imgUrl" placeholder="Image URL" [(ngModel)]="newProduct.imgUrl">
+  <input type="hidden" name="id" [(ngModel)]="newProduct._id">
+  <input type="submit" value="Create Product" [disabled]="!formData.valid">
+</form>

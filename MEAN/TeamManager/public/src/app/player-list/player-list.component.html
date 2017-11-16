@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Preferred Position</th>
+    <th>Actions</th>
+  </thead>
+  <tr *ngFor="let player of players">
+    <td>{{player.name}}</td>
+    <td>{{player.position}}</td>
+    <td><button (click)="deletePlayer(player._id)">Delete</button></td>
+    <!-- [confirm-click]="Are you sure to delete {{player.name}} ?"
+confirmed-click="removeUser(player)" -->
+  </tr>
+</table>
+
+{{players|json}}
+

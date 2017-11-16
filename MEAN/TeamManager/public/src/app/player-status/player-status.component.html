@@ -1,0 +1,35 @@
+<div class="subWrapper">
+  <h1>Player Status - Game </h1>
+
+  <ul>
+    <li><a>Game 1</a></li>
+    <li>|</li>
+    <li><a>Game 2</a></li>
+    <li>|</li>
+    <li><a>Game 3</a></li>
+  </ul>
+
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Actions</th>
+    </thead>
+    <tr *ngFor="let player of players">
+      <td>{{ player.name }}</td>
+      <td>
+
+        <button *ngIf="player.status.game1 =='Playing'" class='Playing'>Playing</button>
+        <button *ngIf="player.status.game1 !='Playing'" (click)="updateGame(player, 1, 'Playing')">Playing</button>
+
+        <button *ngIf="player.status.game1 == 'Not Playing'" class='not_playing'>Not Playing</button>
+        <button *ngIf="player.status.game1 != 'Not Playing'">Not Playing</button>
+        
+        
+        <button *ngIf="player.status.game1 == 'Undecided'" class='undecided'>Undecided</button>
+        <button *ngIf="player.status.game1 != 'Undecided'">Undecided</button>
+      </td>
+    </tr>
+  </table>
+</div>
+  
+{{players|json}}
